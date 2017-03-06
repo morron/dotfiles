@@ -1,0 +1,16 @@
+config/database.yml
+.idea
+Procfile
+dump.*
+coverage
+*~
+.DS_Store
+tags
+*.pyc
+*.tags
+*.tags.lock
+*.swp
+*.svg
+.rake_tasks
+*.gem
+
