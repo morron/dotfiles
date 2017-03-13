@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd vim gem rake rails brew common-aliases ruby rake-fast docker rvm lol)
+plugins=(git fasd vim gem rake rails brew common-aliases ruby rake-fast docker rvm lol tmux)
 
 # User configuration
 
@@ -60,6 +60,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH/alias.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,9 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+export PATH="$PATH:/usr/local/go/bin"
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
