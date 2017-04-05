@@ -15,6 +15,7 @@
   NeoBundle 'airblade/vim-gitgutter'
   NeoBundle 'JamshedVesuna/vim-markdown-preview'
   NeoBundle 'kopischke/vim-stay'
+  NeoBundle 'jlanzarotta/bufexplorer'
 
   " RSpec
   NeoBundle 'thoughtbot/vim-rspec'
