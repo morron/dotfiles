@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd vim gem rake rails brew common-aliases ruby rake-fast docker rvm lol tmux)
+plugins=(aws git github git-flow gitignore golang osx history bundler colorize fasd vim gem rake rails brew common-aliases ruby rake-fast docker rvm lol tmux tmux-cssh)
 
 # User configuration
 
@@ -84,10 +84,21 @@ source $ZSH/alias.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vi ~/.zshrc"
+# alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/local/go/bin"
+export GOPATH=$HOME/go
+export TTC_BOTS='tinycarebot,selfcare_bot,magicrealismbot'
+export TTC_SAY_BOX="bunny"
+export TTC_REPOS="$HOME/atc"
+export TTC_REPOS_DEPTH=2
+export TTC_WEATHER="Moscow"
+export TTC_GITBOT="gitlog"
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"

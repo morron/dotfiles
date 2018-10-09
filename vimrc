@@ -173,7 +173,7 @@
  set wildmenu
 
  " put git status, column/row number, total lines, and percentage in status
- set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
+ " set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
  " set statusline=%{fugitive#statusline()}
 
  " highlight the status bar when in insert mode
@@ -194,6 +194,9 @@
  set nobackup
  set nowb
  set noswapfile
+
+ " fix delete
+ set backspace=indent,eol,start
 
  if executable('zsh')
    set shell=zsh
