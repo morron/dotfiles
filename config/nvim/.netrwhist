@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/iamthemorron/atc/fias'
+let g:netrw_dirhist_2='/Users/iamthemorron/atc/fias/apps'
+let g:netrw_dirhist_3='/Users/iamthemorron/atc/fias/apps/api'
+let g:netrw_dirhist_4='/Users/iamthemorron/atc/fias/apps/api/controllers'
+let g:netrw_dirhist_5='/Users/iamthemorron/atc/fias/apps/api/controllers/fias'
+let g:netrw_dirhist_6='/Users/iamthemorron/atc/fias/.idea'
