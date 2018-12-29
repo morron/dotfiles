@@ -1,19 +1,36 @@
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 set runtimepath^=~/.config/nvim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.config/nvim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+
+"" BUNDLE
+""
+
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'iamcco/markdown-preview.vim'
 NeoBundle 'kopischke/vim-stay'
-"NeoBundle 'janko-m/vim-test'
-NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'duggiefresh/vim-easydir'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'AndrewRadev/splitjoin.vim'
-NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'airblade/vim-rooter'
+"NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'k0kubun/vim-open-github'
+"
+NeoBundle 'bogado/file-line'
+
+" Deoplete
+NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'fishbullet/deoplete-ruby'
 
 " incrsearch
 NeoBundle 'haya14busa/incsearch.vim'
@@ -21,8 +38,11 @@ NeoBundle 'haya14busa/incsearch-easymotion.vim'
 NeoBundle 'haya14busa/incsearch-fuzzy.vim'
 
 " Snippets
+NeoBundle "MarcWeber/vim-addon-mw-utils"
+NeoBundle "tomtom/tlib_vim"
+NeoBundle "garbas/vim-snipmate"
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'honza/vim-snippets'
-"NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 
@@ -37,18 +57,14 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'majutsushi/tagbar'
-
-" RSpec
-NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'morhetz/gruvbox'
+NeoBundle 'kien/rainbow_parentheses.vim'
 
 " Formatter
 NeoBundle 'Chiel92/vim-autoformat'
 
 " Vim ident guides
 NeoBundle 'nathanaelkane/vim-indent-guides'
-
-" Xkb switch
-"NeoBundle 'lyokha/vim-xkbswitch'
 
 " Whitespaces
 NeoBundle 'ntpeters/vim-better-whitespace'
@@ -64,13 +80,11 @@ NeoBundle 'jgdavey/tslime.vim'
 "" Search
 NeoBundle 'junegunn/fzf'
 NeoBundle 'junegunn/fzf.vim'
-"NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
 "
 "" NERDTree file browser
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'jistr/vim-nerdtree-tabs'
 "
 "" NERDCommenter
 NeoBundle 'scrooloose/nerdcommenter'
@@ -80,23 +94,28 @@ NeoBundle 'editorconfig/editorconfig-vim'
 "
 "" Syntax analyze ( so slow )
 " NeoBundle 'scrooloose/syntastic'
-NeoBundle 'vim-syntastic/syntastic'
+" NeoBundle 'vim-syntastic/syntastic'
 "
 "" HTML
-NeoBundle 'rstacruz/sparkup'
-NeoBundle 'mattn/emmet-vim'
+NeoBundle 'othree/html5.vim'
+"NeoBundle 'rstacruz/sparkup'
+"NeoBundle 'mattn/emmet-vim'
 "
 "" Languages support
 "
+NeoBundle 'Soares/fish.vim'
+
 "" Ruby
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-rails'
+NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'ervandew/supertab'
+" NeoBundle 'ervandew/supertab'
 NeoBundle 'ngmy/vim-rubocop'
+NeoBundle 'ecomba/vim-ruby-refactoring'
 
 "" Go
+NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'fatih/vim-go'
 
 "" js
@@ -117,18 +136,15 @@ NeoBundle 'mattn/webapi-vim'
 " SLIM
 NeoBundle 'slim-template/vim-slim'
 
-" Elixir
-" NeoBundle 'elixir-lang/vim-elixir'
-" NeoBundle 'awetzel/neovim-elixir'
-
 " Fun
 NeoBundle 'wakatime/vim-wakatime'
 
 NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'chase/vim-ansible-yaml'
 
 NeoBundle 'sukima/xmledit'
+NeoBundle 'hashivim/vim-terraform'
+NeoBundle 'juliosueiras/vim-terraform-completion'
 
 call neobundle#end()
 

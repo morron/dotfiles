@@ -11,4 +11,6 @@ tags
 *.swp
 .rake_tasks
 *.gem
+tmp
 
+docker-compose-dev.*

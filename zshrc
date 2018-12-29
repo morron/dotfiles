@@ -96,9 +96,17 @@ export TTC_REPOS="$HOME/atc"
 export TTC_REPOS_DEPTH=2
 export TTC_WEATHER="Moscow"
 export TTC_GITBOT="gitlog"
+
+export TERM="xterm-256color"
+export EDITOR="vim"
+export LC_CTYPE=en_RU.UTF-8
+export LC_ALL=en_RU.UTF-8
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
