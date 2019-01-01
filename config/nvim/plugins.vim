@@ -14,6 +14,7 @@ NeoBundle 'duggiefresh/vim-easydir'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'Shougo/deoplete.nvim'
 
 " incrsearch
 NeoBundle 'haya14busa/incsearch.vim'

@@ -290,6 +290,7 @@ let g:fzf_colors =
 
 " Golang support
 let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -298,7 +299,7 @@ let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
-"let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 let g:gitgutter_override_sign_column_highlight = 0
 " Xkb switch settings
@@ -349,7 +350,8 @@ autocmd Filetype javascript   setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffeescript setlocal ts=2 sw=2 expandtab
 autocmd Filetype crystal      setlocal ts=2 sw=2 expandtab
 autocmd Filetype cucumber     setlocal ts=2 sw=2 expandtab
-autocmd FileType vue          syntax sync fromstart
+autocmd Filetype vue          syntax sync fromstart
+autocmd Filetype go           setlocal ts=4 sw=4 expandtab
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
