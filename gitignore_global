@@ -1,5 +1,7 @@
 config/database.yml
 .idea
+.vscode
+.config
 dump.*
 coverage
 *~
@@ -14,3 +16,9 @@ tags
 tmp
 
 docker-compose-dev.*
+
+src/terraform/apps.dev/*.tf
+
+Dockerfile-debug
+docker-compose-debug.yml
+update_drivers.rb

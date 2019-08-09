@@ -6,10 +6,8 @@ set runtimepath^=~/.config/nvim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.config/nvim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
 "" BUNDLE
 ""
-
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'kopischke/vim-stay'
@@ -25,8 +23,14 @@ NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'airblade/vim-rooter'
 "NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'k0kubun/vim-open-github'
-"
 NeoBundle 'bogado/file-line'
+NeoBundle 'Soares/fish.vim'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'sukima/xmledit'
+NeoBundle 'hashivim/vim-terraform'
+NeoBundle 'juliosueiras/vim-terraform-completion'
+NeoBundle 'solarnz/thrift.vim'
 
 " Deoplete
 NeoBundle 'Shougo/deoplete.nvim'
@@ -36,7 +40,7 @@ NeoBundle 'fishbullet/deoplete-ruby'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'haya14busa/incsearch-easymotion.vim'
 NeoBundle 'haya14busa/incsearch-fuzzy.vim'
-
+"
 " Snippets
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "tomtom/tlib_vim"
@@ -58,7 +62,9 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'morhetz/gruvbox'
-NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'eapache/rainbow_parentheses.vim'
+NeoBundle 'fxn/vim-monochrome'
+NeoBundle 'pgdouyon/vim-yin-yang'
 
 " Formatter
 NeoBundle 'Chiel92/vim-autoformat'
@@ -93,25 +99,22 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'editorconfig/editorconfig-vim'
 "
 "" Syntax analyze ( so slow )
-" NeoBundle 'scrooloose/syntastic'
-" NeoBundle 'vim-syntastic/syntastic'
+NeoBundle 'vim-syntastic/syntastic'
 "
 "" HTML
 NeoBundle 'othree/html5.vim'
-"NeoBundle 'rstacruz/sparkup'
-"NeoBundle 'mattn/emmet-vim'
+
 "
 "" Languages support
 "
-NeoBundle 'Soares/fish.vim'
 
 "" Ruby
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-endwise'
-" NeoBundle 'ervandew/supertab'
 NeoBundle 'ngmy/vim-rubocop'
+NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 
 "" Go
@@ -136,15 +139,12 @@ NeoBundle 'mattn/webapi-vim'
 " SLIM
 NeoBundle 'slim-template/vim-slim'
 
+" Elixir
+" NeoBundle 'elixir-lang/vim-elixir'
+" NeoBundle 'awetzel/neovim-elixir'
+
 " Fun
 NeoBundle 'wakatime/vim-wakatime'
-
-NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'chase/vim-ansible-yaml'
-
-NeoBundle 'sukima/xmledit'
-NeoBundle 'hashivim/vim-terraform'
-NeoBundle 'juliosueiras/vim-terraform-completion'
 
 call neobundle#end()
 
