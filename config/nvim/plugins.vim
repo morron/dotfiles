@@ -34,7 +34,8 @@ NeoBundle 'solarnz/thrift.vim'
 
 " Deoplete
 NeoBundle 'Shougo/deoplete.nvim'
-NeoBundle 'fishbullet/deoplete-ruby'
+NeoBundle 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" NeoBundle 'fishbullet/deoplete-ruby'
 
 " incrsearch
 NeoBundle 'haya14busa/incsearch.vim'
@@ -44,11 +45,10 @@ NeoBundle 'haya14busa/incsearch-fuzzy.vim'
 " Snippets
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "tomtom/tlib_vim"
-NeoBundle "garbas/vim-snipmate"
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle "garbas/vim-snipmate"
+" NeoBundle 'honza/vim-snippets'
+" NeoBundle 'Shougo/neosnippet.vim'
+" NeoBundle 'Shougo/neosnippet-snippets'
 
 " Style
 NeoBundle 'sindresorhus/focus'
