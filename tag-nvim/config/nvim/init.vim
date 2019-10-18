@@ -6,13 +6,6 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/basic.vim
 source ~/.config/nvim/style.vim
 
-"" Ack.vim
-let g:ackprg = 'rg --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
 nnoremap <leader>8 Orequire'debugger';debugger<esc>
 nnoremap <leader>9 Orequire'pry';binding.pry<esc>
 
@@ -127,10 +120,18 @@ let g:dasht_context = { 'ruby': ['Ruby_2', 'Ruby_on_Rails_4'] }
 
 " FZF
 "let g:fzf_buffers_jump = 1
+"
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
 
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noruler
-      \| autocmd BufLeave <buffer> set laststatus=2 ruler
+" autocmd! FileType fzf
+" autocmd  FileType fzf set laststatus=0 noruler
+"       \| autocmd BufLeave <buffer> set laststatus=2 ruler
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '20new' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -158,6 +159,41 @@ function! s:fzf_root()
   let path = finddir(".git", expand("%:p:h").";")
   return fnamemodify(substitute(path, ".git", "", ""), ":p:h")
 endfunction
+
+if has("nvim")
+  au TermOpen * tnoremap <Esc> <c-\><c-n>
+  au FileType fzf tunmap <Esc>
+endif
+
+if has('nvim') && exists('&winblend') && &termguicolors
+  set winblend=10
+
+  hi NormalFloat guibg=None
+  if exists('g:fzf_colors.bg')
+    call remove(g:fzf_colors, 'bg')
+  endif
+
+  if stridx($FZF_DEFAULT_OPTS, '--border') == -1
+    let $FZF_DEFAULT_OPTS .= ' --border'
+  endif
+
+  function! FloatingFZF()
+    let buf = nvim_create_buf(v:false, v:true)
+    call setbufvar(buf, '&signcolumn', 'no')
+
+    let width = float2nr(&columns * 0.8)
+    let height = float2nr(&lines * 0.6)
+    let opts = { 'relative': 'editor',
+               \ 'row': (&lines - height) / 2,
+               \ 'col': (&columns - width) / 2,
+               \ 'width': width,
+               \ 'height': height }
+
+    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+  endfunction
+
+  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+endif
 
 "  " Indent guides settings
 let g:indent_guides_auto_colors = 0
@@ -191,6 +227,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
@@ -255,6 +293,8 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+cnoreabbrev Tabo tabo
+cnoreabbrev Tabc tabc
 
 let mapleader=","
 nmap <Leader>k :DashtContext <C-R><C-W><CR>
@@ -273,11 +313,12 @@ cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 "let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 nmap <Leader>f :Files<CR>
+nmap <Leader>r :Rg<CR>
 nmap <Leader>b :Buffers<CR>
 
 nmap <Leader>s :SyntasticCheck<CR>
 nmap <Leader>gb :Gblame<CR>
-nmap <Leader>d :Gdiff<CR>
+nmap <Leader>gd :Gdiff<CR>
 
 " map <Leader>gb :GoBuild<CR>
 map <Leader>rt :call RunCurrentSpecFile()<CR>

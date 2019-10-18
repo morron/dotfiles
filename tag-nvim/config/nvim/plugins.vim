@@ -33,8 +33,9 @@ NeoBundle 'juliosueiras/vim-terraform-completion'
 NeoBundle 'solarnz/thrift.vim'
 
 " Deoplete
-NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 NeoBundle 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+NeoBundle 'deoplete-plugins/deoplete-go', {'build': {'unix': 'make'}}
 " NeoBundle 'fishbullet/deoplete-ruby'
 
 " incrsearch
@@ -43,9 +44,10 @@ NeoBundle 'haya14busa/incsearch-easymotion.vim'
 NeoBundle 'haya14busa/incsearch-fuzzy.vim'
 "
 " Snippets
-NeoBundle "MarcWeber/vim-addon-mw-utils"
-NeoBundle "tomtom/tlib_vim"
-" NeoBundle "garbas/vim-snipmate"
+NeoBundle 'SirVer/ultisnips'
+" NeoBundle 'MarcWeber/vim-addon-mw-utils'
+" NeoBundle 'tomtom/tlib_vim'
+" NeoBundle 'garbas/vim-snipmate'
 " NeoBundle 'honza/vim-snippets'
 " NeoBundle 'Shougo/neosnippet.vim'
 " NeoBundle 'Shougo/neosnippet-snippets'
@@ -86,7 +88,7 @@ NeoBundle 'jgdavey/tslime.vim'
 "" Search
 NeoBundle 'junegunn/fzf'
 NeoBundle 'junegunn/fzf.vim'
-NeoBundle 'mileszs/ack.vim'
+" NeoBundle 'mileszs/ack.vim'
 "
 "" NERDTree file browser
 NeoBundle 'scrooloose/nerdtree'
@@ -118,7 +120,6 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 
 "" Go
-NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'fatih/vim-go'
 
 "" js

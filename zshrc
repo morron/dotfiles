@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git github git-flow gitignore golang osx history bundler colorize fasd vim gem rake rails brew common-aliases ruby rake-fast docker rvm lol tmux tmux-cssh)
+plugins=(aws git github git-flow gitignore golang osx history bundler colorize fasd gem rake rails brew common-aliases ruby rake-fast docker rvm lol tmux tmux-cssh)
 
 # User configuration
 
@@ -101,6 +101,7 @@ export TERM="xterm-256color"
 export EDITOR="vim"
 export LC_CTYPE=en_RU.UTF-8
 export LC_ALL=en_RU.UTF-8
+export CGO_ENABLED=0
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
