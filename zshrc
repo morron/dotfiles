@@ -97,7 +97,7 @@ export TTC_REPOS_DEPTH=2
 export TTC_WEATHER="Moscow"
 export TTC_GITBOT="gitlog"
 
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export EDITOR="vim"
 export LC_CTYPE=en_RU.UTF-8
 export LC_ALL=en_RU.UTF-8
