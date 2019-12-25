@@ -29,7 +29,6 @@ NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'sukima/xmledit'
 NeoBundle 'hashivim/vim-terraform'
-NeoBundle 'juliosueiras/vim-terraform-completion'
 NeoBundle 'solarnz/thrift.vim'
 
 " Deoplete

@@ -6,7 +6,7 @@ export ZSH=/Users/iamthemorron/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="kolo"
-ZSH_THEME="ys"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,8 +99,9 @@ export TTC_GITBOT="gitlog"
 
 export TERM="screen-256color"
 export EDITOR="vim"
-export LC_CTYPE=en_RU.UTF-8
-export LC_ALL=en_RU.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export CGO_ENABLED=0
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
